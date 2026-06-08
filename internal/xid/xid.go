@@ -21,5 +21,5 @@ func New() ID {
 }
 
 func (i ID) Path() string {
-	return filepath.Join(string(i[0:2]), string(i[2:8]))
+	return filepath.Join(string(i[0:2]), string(i[2:8])+".md")
 }

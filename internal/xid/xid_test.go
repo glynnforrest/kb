@@ -13,7 +13,7 @@ func TestNew(t *testing.T) {
 
 func TestPath(t *testing.T) {
 	id := ID("abcdefgh")
-	expected := "ab/cdefgh"
+	expected := "ab/cdefgh.md"
 	actual := id.Path()
 	if expected != actual {
 		t.Fatalf("expected %v, got %v", expected, actual)
