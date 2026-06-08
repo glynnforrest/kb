@@ -1,0 +1,9 @@
+---
+type: note
+tags:
+  - fixture-4
+  - fixture-1
+
+# Some page
+
+Some test here.
