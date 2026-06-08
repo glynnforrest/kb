@@ -15,6 +15,7 @@ type command struct {
 func Run() {
 	commands := []*command{
 		fixturesCmd(),
+		lsCmd(),
 	}
 
 	if len(os.Args) < 2 {
