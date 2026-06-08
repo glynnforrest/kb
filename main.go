@@ -1,13 +1,9 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/glynnforrest/kb/internal/xid"
+	"github.com/glynnforrest/kb/internal/cmd"
 )
 
 func main() {
-	id := xid.New()
-	fmt.Println(id)
-	fmt.Println(id.Path())
+	cmd.Run()
 }
