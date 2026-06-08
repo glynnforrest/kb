@@ -1,7 +1,7 @@
 package xid
 
 import (
-	"crypto/rand"
+	"math/rand/v2"
 	"path/filepath"
 )
 
@@ -12,19 +12,12 @@ const (
 
 type ID string
 
-func New() (ID, error) {
-	bytes := make([]byte, length)
-
-	if _, err := rand.Read(bytes); err != nil {
-		return "", err
-	}
-
+func New() ID {
 	id := make([]byte, length)
 	for i := 0; i < length; i++ {
-		id[i] = alphabet[int(bytes[i])%len(alphabet)]
+		id[i] = alphabet[rand.IntN(len(alphabet))]
 	}
-
-	return ID(id), nil
+	return ID(id)
 }
 
 func (i ID) Path() string {

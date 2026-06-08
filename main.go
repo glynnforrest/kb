@@ -7,10 +7,7 @@ import (
 )
 
 func main() {
-	id, err := xid.New()
-	if err != nil {
-		panic(err)
-	}
+	id := xid.New()
 	fmt.Println(id)
 	fmt.Println(id.Path())
 }

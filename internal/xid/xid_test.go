@@ -5,10 +5,7 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	id, err := New()
-	if err != nil {
-		t.Fatalf("expected no error, got %v", err)
-	}
+	id := New()
 	if len(id) != 8 {
 		t.Fatalf("expected length 8, got %d", len(id))
 	}
